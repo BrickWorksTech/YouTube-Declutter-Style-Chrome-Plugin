@@ -1,0 +1,18 @@
+
+{
+  "manifest_version": 3,
+  "name": "YouTube Layout Modifier",
+  "version": "1.0",
+  "description": "Show 8 recommended videos per row and combine Shorts into one container.",
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon.png"
+  }
+}
